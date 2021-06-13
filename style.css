@@ -1,38 +1,32 @@
-*
-{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
 }
 
-body
-{
+body{
     font-family: 'Merriweather', serif;
     background-color: #ebf2ff;
 
 }
 
-.navbar
-{
+.navbar{
     display: flex;
-    align-items: center;
+    align-items:center;
     justify-content: space-around;
     background-color: #fff;
 }
 
-.navbar_brand
-{
+.navbar_brand{
     width: 100px;
 }
 
-.navbar_logo
-{
+.navbar_logo{
     width: 100%;
 }
 
-.nav_item
-{
+.nav_item{
     background-image: linear-gradient(
         to right,
         #ff512f 0%,
@@ -47,32 +41,96 @@ body
     cursor: pointer;
 }
 
+.nav_item:hover{
+    border: 10px solid blue;
+
+}
+
+.hero_image_container{
+    width: 100%;
+}
+
+.hero_image{
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.container{
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.button_primary{
+    background-image: linear-gradient(
+        to right,
+        #ff512f 0%,
+        #dd2476 51%,
+        #ff512f 100%
+    );
+
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.hero_text{
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+/*media query for tablet*/
 @media (min-width:768px)
 {
-    .navbar
-    {
+    .navbar{
         justify-content: space-between;
         padding: 2px 30px;
     }
+
+    .hero_container{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-top: 20px;
+    }
 }
 
+/*media query for laptop*/
 @media (min-width:1020px)
 {
-    .navbar_brand
-    {
+    .navbar_brand{
         width: 150px;
 
     }
 
-    .nav_item
-    {
+    .button_primary{
         padding: 20px;
         font-size: 20px;
     }
+
+    .hero_description{
+        width: 100%;
+    }
+
+    .container{
+        max-width: 900px;
+    }
+
+    .hero_text{
+        font-size: 50px;
+    }
+
 }
 
-.nav_item:hover
+/*media query*/
+@media(min-width:1400px)
 {
-    border: 10px solid blue;
-
+    .container{
+        max-width: 1250px;
+    }
 }
+
