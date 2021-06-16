@@ -8,6 +8,8 @@
 body{
     font-family: 'Merriweather', serif;
     background-color: #ebf2ff;
+    overflow-x: hidden;
+    transition: 0.5s;
 
 }
 
@@ -46,12 +48,26 @@ body{
 
 }
 
+.hero__container {
+    margin-top: 1rem;
+  }
+
 .hero_image_container{
+    position: relative;
     width: 100%;
 }
 
+.hero__image__shape {
+    position: absolute;
+    right: 2;
+  }
+
 .hero_image{
+    position: absolute;
     width: 100%;
+    right: auto;
+    left: auto;
+    z-index: 2;
     border-radius: 8px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
@@ -153,116 +169,92 @@ body{
     text-align: center;
 }
 
-.update_container{
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.update_text{
-    padding: 10px 0;
-    font-size: 30px;
+.email__subcribe__container {
+    margin-top: 3rem;
     width: 100%;
-}
-
-.update_email_input{
-    background-color: rgb(230, 214, 216);
-    padding: 4px 4px;
-    border: 1px solid rgb(209, 100, 100);
-    border-radius: 5px;
-}
-
-.update_email{
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .email__subcribe__input__field {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     gap: 10px;
-}
-
-.update_get{
-    background-image: linear-gradient(
-        to right,
-        #ff512f 0%,
-        #dd2476 51%,
-        #ff512f 100%
-    );
-
-    color: #fff;
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    cursor: pointer;
-
-
-}
-
-.qoute_container{
+  }
+  
+  .email__input {
+    border: 1px solid #ee89a0;
+    background-color: #fcedf0;
+    color: #1d3557;
+    font-weight: 700;
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+  
+  .email__input::placeholder {
+    color: #bdbcbc;
+  }
+  
+  .quote__container {
     position: relative;
     margin-top: 4rem;
+    margin-bottom: 4rem;
     align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     height: 200px;
     width: 100%;
     border-radius: 13px;
-    background: 
-    url(https://images.unsplash.com/photo-1522336572468-97b06e8ef143?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80) 
-    center center / cover no-repeat;
-}
-
-.quote_image_overlay {
+    background: url("https://images.unsplash.com/photo-1522336572468-97b06e8ef143?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80")
+      center center / cover no-repeat;
+  }
+  .quote_image_overlay {
     position: absolute;
     height: 200px;
     width: 100%;
     border-radius: 13px;
-    background-color: #aec5d4;
-    opacity: 40%;
-}
-
-.quote_image_text {
+    background-color: #0a4065;
+    opacity: 49%;
+  }
+  .quote_image_text {
     color: #fff;
     z-index: 3;
     margin: 0 1rem;
     text-align: center;
-    padding-left: 5px 5px;
-}
-
-h3 {
-    display: block;
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
-
-footer {
-    margin-top: 40px;
-    padding-bottom: 10px;
+  }
+  
+  footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 1rem 1rem 0 0;
-    background-image: linear-gradient( to right, #ff512f 0%, #dd2476 51%, #ff512f 100% );
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
-
-ul li{
+    background-image: linear-gradient(
+      to right,
+      #ff512f 0%,
+      #dd2476 51%,
+      #ff512f 100%
+    );
+  }
+  
+  footer > img {
+    width: 300px;
+    filter: brightness(0) invert(1);
+  }
+  
+  footer > ul {
+    margin-top: -1rem;
     color: #fff;
-}
-
+  }
+  
+  footer > ul > li {
+    margin: 5px 0;
+    list-style: none;
+  }
+  
 
 /*------------------------------------------------------------------------------------------------------------------------------------*/
 /*media query for tablet*/
@@ -279,6 +271,10 @@ ul li{
         align-items: center;
         margin-top: 20px;
     }
+
+    .hero__image {
+        margin-top: 2rem;
+      }
 
     .explore_menu_lists{
         display: flex;
@@ -332,54 +328,40 @@ ul li{
         font-size: 40px;
     }
 
-    .update_container{
+    .email__subcribe__container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
-        margin: 50px 200px;
-    }
+      }
+      .email__input {
+        width: 20rem;
+      }
 
-    .update_email{
-        max-width: 100%;
-        display: flex;
-        gap: 20px;
-    }
+      .text-xl {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+      }
 
-    .update_email_input{
-        max-width: 100%;
-    }
-
-    .update_text{
-        margin-left: 40px;
-        font-size: 40px;
-    }
-
-    .quote__container {
-        display: flex;
-        height: 400px;
+      .quote__container {
+        height: 300px;
         width: 100%;
-    }
-
-    .quote_image_overlay {
+      }
+      .quote_image_overlay {
         position: absolute;
-        height: 400px;
+        height: 300px;
         width: 100%;
         border-radius: 13px;
         background-color: #0a4065;
-        opacity: 40%;
-    }
-
-    .quote_image_text {
-        width: 90%;
-        color:white;
+        opacity: 49%;
+      }
+      .quote_image_text {
+        color: #fff;
         z-index: 3;
         margin: 0 1rem;
         text-align: center;
-        font-size: 1rem;
-        font-weight: bolder;
-        line-height: 1.0;
-    }
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.2;
+      }
 
     footer {
         margin-top: 3rem;
@@ -419,48 +401,6 @@ ul li{
 
     .explore_menu_text{
         font-size: 50px;
-    }
-
-    .update_text{
-        margin-left: 70px;
-        font-size: 40px;
-        font-weight:700;
-        max-width: 100%;
-    }
-
-    .update_email{
-        max-width: 100%;
-        display: flex;
-        gap: 20px;
-    }
-
-    .update_email_input{
-        max-width: 100%;
-        padding-right: 100px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-
-    .update_get{
-        background-image: linear-gradient(
-            to right,
-            #ff512f 0%,
-            #dd2476 51%,
-            #ff512f 100%
-        );
-    
-        color: #fff;
-        border: none;
-        padding: 12px;
-        border-radius: 6px;
-        cursor: pointer;
-    
-    
-    }
-
-    .qoute_container{
-        height: 45vh;
-        width: 100%;
     }
     
 

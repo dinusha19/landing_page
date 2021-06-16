@@ -27,6 +27,8 @@
         <section class="hero_container">
             <div class="hero_image_container">
                 <img src="./assets/hero.jpg" alt="hero image" class="hero_image"/>
+                <img src="./assets/svg/heroShape.svg" alt="hero image shape"class="hero__image__shape"/>
+                <img src="./assets/svg/herobgpattren.svg" alt="hero image shape" class="hero__image__pattren"/>
             </div>
             <div class="hero_description">
                 <h1 class="hero_text">Order food from favourite restaurants near you.</h1>
@@ -103,35 +105,49 @@
         </section>
 
         <!--Update-->
-        <section class="update_container">
-            <h1 class="update_text">Stay Updated</h1>
-            <div class="update_email">
-                <input type="email" placeholder="email@email.com" class="update_email_input"/>
-                <button class="update_get">Get Updates</button>
+        <section class="email__subcribe__container">
+            <div>
+              <h1 class="text-xl">Stay Updated</h1>
+              <div class="email__subcribe__input__field">
+                <div><input type="email" placeholder="email@email.com" class="email__input"/></div>
+                <button class="button_primary">Get Updates</button>
+              </div>
             </div>
-        </section>
+          </section>
+        
 
         <!--Qoute container-->
-        <section class="qoute_container">
-            <div class="qoute_image_overlay">
-                <h3 class="qoute_image_text" style="color: white;">
-                    When a man's stomach is full it makes no difference whether he is rich
-                    or poor.
-                </h3>
-            </div>
+        <section class="quote__container">
+            <div class="quote_image_overlay"></div>
+            <h3 class="quote_image_text">
+              When a man's stomach is full it makes no difference whether he is rich
+              or poor.
+            </h3>
         </section>
     </main>
 
     <footer>
-        <img src="/assets/logo.png" alt="logo"/>
+        <img src="./assets/logo.png" alt="logo" />
         <ul>
-            <li>Pricing</li>
-            <li>Terms and condition</li>
-            <li>Partnership</li>
-            <li>Career</li>
-            <li>Contacts</li>
+          <li>Pricing</li>
+          <li>Terms and condition</li>
+          <li>Partnership</li>
+          <li>Career</li>
+          <li>Contact</li>
         </ul>
-    </footer>
-    
+      </footer>
+      <script>
+        const hamburgermenu = document.getElementById("hamburgermenu");
+        const mobileNavDropDown = document.querySelector(
+          ".mobile__navbar__items"
+        );
+        window.addEventListener("click", () => {
+          if (mobileNavDropDown.classList.contains("hamburger__menu__close"))
+            return mobileNavDropDown.classList.remove("hamburger__menu__close");
+          return mobileNavDropDown.classList.add("hamburger__menu__close");
+        });
+      </script>
+
+
 </body>
 </html>
