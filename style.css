@@ -13,6 +13,7 @@ body{
 
 }
 
+/*nav bar*/
 .navbar{
     display: flex;
     align-items:center;
@@ -48,6 +49,7 @@ body{
 
 }
 
+/*hero section*/
 .hero__container {
     margin-top: 1rem;
   }
@@ -99,6 +101,7 @@ body{
     margin: 20px 0;
 }
 
+/*Explore menue section*/
 .food_card_image_container{
     width: 100%;
 }
@@ -169,6 +172,7 @@ body{
     text-align: center;
 }
 
+/*email section*/
 .email__subcribe__container {
     margin-top: 3rem;
     width: 100%;
@@ -197,6 +201,7 @@ body{
     color: #bdbcbc;
   }
   
+  /*qoute section*/
   .quote__container {
     position: relative;
     margin-top: 4rem;
@@ -226,6 +231,8 @@ body{
     text-align: center;
   }
   
+
+  /*footer section*/
   footer {
     display: flex;
     flex-direction: column;
@@ -256,7 +263,7 @@ body{
   }
   
 
-/*------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------*/
 /*media query for tablet*/
 @media (min-width:768px)
 {
